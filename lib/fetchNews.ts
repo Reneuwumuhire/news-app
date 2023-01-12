@@ -47,7 +47,7 @@ const fetchNews = async (
 		{
 			method: "POST",
 			cache: isDynamic ? "no-cache" : "default",
-			next: isDynamic ? { revalidate: 0 } : { revalidate: 300000 },
+			next: isDynamic ? { revalidate: 0 } : { revalidate: 300 },
 			headers: {
 				"Content-Type": "application/json",
 				Authorization: `ApiKey ${process.env.STEPZEN_API_KEY}`,
